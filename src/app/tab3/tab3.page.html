@@ -1,17 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
+    <a [routerLink]="'/tabs/new-page'"><ion-icon name="arrow-back"></ion-icon>GO ABOUT ME</a>
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large" style="background: burlywood; padding: top 1;">ELIMINAR CONTACTO</ion-title>
     </ion-toolbar>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div style="border: 3px; border-color: black; padding: 3; margin: auto;">
+    <ion-button color="danger" expand="block" (click)="ConsultaContactService.presentAlertConfirm()" (click)="ConsultaContactService.delete()">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-button>
+  </div>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
+

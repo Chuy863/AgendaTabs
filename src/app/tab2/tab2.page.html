@@ -1,17 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
+    <a [routerLink]="'/tabs/new-page'"><ion-icon name="arrow-back"></ion-icon>GO ABOUT ME</a>
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large" style="background: burlywood;">CONTACTOS</ion-title>
     </ion-toolbar>
+
+    <ion-card style="background:snow; background-color: palegreen; font-family: 'Times New Roman', Times, serif; font-size: 35px;" *ngFor="let persona of ConsultaContactService.personas">
+      <ion-card-header>
+        <h5>{{persona.nombreCompleto}}</h5>
+        <h5>{{persona.telefono}}</h5>
+        <h5>{{persona.correo}}</h5>
+        <h5>{{persona.notas}}</h5>
+        
+      </ion-card-header>
+    
+
+    </ion-card>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
